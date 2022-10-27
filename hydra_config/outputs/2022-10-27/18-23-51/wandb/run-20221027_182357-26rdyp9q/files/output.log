@@ -1,0 +1,68 @@
+Validation sanity check:   0%|                                                                 | 0/2 [00:00<?, ?it/s]----- tensor([1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0,
+        1, 1, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 0, 0, 1, 0,
+        1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0, 1, 0, 1, 1, 1])
+  | Name                   | Type                          | Params
+-------------------------------------------------------------------------
+0 | bert                   | BertForSequenceClassification | 4.4 M
+1 | W                      | Linear                        | 258
+2 | train_accuracy_metric  | Accuracy                      | 0
+3 | val_accuracy_metric    | Accuracy                      | 0
+4 | precision_macro_metric | Precision                     | 0
+5 | recall_macro_metric    | Recall                        | 0
+6 | precision_micro_metric | Precision                     | 0
+7 | recall_micro_metric    | Recall                        | 0
+-------------------------------------------------------------------------
+4.4 M     Trainable params
+0         Non-trainable params
+4.4 M     Total params
+17.546    Total estimated model params size (MB)
+/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pytorch_lightning/utilities/distributed.py:68: UserWarning: The dataloader, val dataloader 0, does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` (try 8 which is the number of cpus on this machine) in the `DataLoader` init to improve performance.
+  warnings.warn(*args, **kwargs)
+Error executing job with overrides: []
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/hydra/_internal/utils.py", line 211, in run_and_report
+    return func()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/hydra/_internal/utils.py", line 368, in <lambda>
+    lambda: hydra.run(
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/hydra/_internal/hydra.py", line 110, in run
+    _ = ret.return_value
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/hydra/core/utils.py", line 233, in return_value
+    raise self._return_value
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/hydra/core/utils.py", line 160, in run_job
+    ret.return_value = task_function(task_cfg)
+  File "/Users/prabinnepal/my_projects/MLOps/hydra_config/train.py", line 75, in main
+    trainer.fit(cola_model, cola_data)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 499, in fit
+    self.dispatch()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 546, in dispatch
+    self.accelerator.start_training(self)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pytorch_lightning/accelerators/accelerator.py", line 73, in start_training
+    self.training_type_plugin.start_training(trainer)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pytorch_lightning/plugins/training_type/training_type_plugin.py", line 114, in start_training
+    self._results = trainer.run_train()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 607, in run_train
+    self.run_sanity_check(self.lightning_module)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 864, in run_sanity_check
+    _, eval_results = self.run_evaluation(max_batches=self.num_sanity_val_batches)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 726, in run_evaluation
+    output = self.evaluation_loop.evaluation_step(batch, batch_idx, dataloader_idx)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pytorch_lightning/trainer/evaluation_loop.py", line 166, in evaluation_step
+    output = self.trainer.accelerator.validation_step(args)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pytorch_lightning/accelerators/accelerator.py", line 177, in validation_step
+    return self.training_type_plugin.validation_step(*args)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pytorch_lightning/plugins/training_type/training_type_plugin.py", line 131, in validation_step
+    return self.lightning_module.validation_step(*args, **kwargs)
+  File "/Users/prabinnepal/my_projects/MLOps/hydra_config/model.py", line 87, in validation_step
+    self.log("valid/f1", f1, prog_bar=True, on_epoch=True)
+NameError: name 'f1' is not defined
+During handling of the above exception, another exception occurred:
+Traceback (most recent call last):
+  File "/Users/prabinnepal/my_projects/MLOps/hydra_config/train.py", line 80, in <module>
+    main()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/hydra/main.py", line 49, in decorated_main
+    _run_hydra(
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/hydra/_internal/utils.py", line 367, in _run_hydra
+    run_and_report(
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/hydra/_internal/utils.py", line 281, in run_and_report
+    print_exception(etype=None, value=ex, tb=final_tb)  # type: ignore
+TypeError: print_exception() got an unexpected keyword argument 'etype'

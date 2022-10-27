@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/Users/prabinnepal/my_projects/MLOps/wandb_logging/train.py", line 36, in <module>
+    main()
+  File "/Users/prabinnepal/my_projects/MLOps/wandb_logging/train.py", line 15, in main
+    cola_model = ColaModel()
+  File "/Users/prabinnepal/my_projects/MLOps/wandb_logging/model.py", line 18, in __init__
+    self.train_accuracy_metric = torchmetrics.Accuracy()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1236, in __setattr__
+    raise AttributeError(
+AttributeError: cannot assign module before Module.__init__() call

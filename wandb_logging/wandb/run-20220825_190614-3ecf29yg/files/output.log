@@ -1,0 +1,15 @@
+Some weights of the model checkpoint at google/bert_uncased_L-2_H-128_A-2 were not used when initializing BertForSequenceClassification: ['cls.predictions.transform.LayerNorm.weight', 'cls.seq_relationship.weight', 'cls.predictions.transform.dense.weight', 'cls.seq_relationship.bias', 'cls.predictions.decoder.bias', 'cls.predictions.decoder.weight', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.bias', 'cls.predictions.transform.dense.bias']
+- This IS expected if you are initializing BertForSequenceClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertForSequenceClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of BertForSequenceClassification were not initialized from the model checkpoint at google/bert_uncased_L-2_H-128_A-2 and are newly initialized: ['classifier.bias', 'classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Traceback (most recent call last):
+  File "/Users/prabinnepal/my_projects/MLOps/wandb_logging/train.py", line 36, in <module>
+    main()
+  File "/Users/prabinnepal/my_projects/MLOps/wandb_logging/train.py", line 15, in main
+    cola_model = ColaModel()
+  File "/Users/prabinnepal/my_projects/MLOps/wandb_logging/model.py", line 19, in __init__
+    self.bert = AutoModelForSequenceClassification.from_pretrained(model_name, num_labels=2)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1236, in __setattr__
+    raise AttributeError(
+AttributeError: cannot assign module before Module.__init__() call

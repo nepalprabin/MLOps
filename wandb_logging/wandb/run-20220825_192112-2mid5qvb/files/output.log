@@ -1,0 +1,207 @@
+Some weights of the model checkpoint at google/bert_uncased_L-2_H-128_A-2 were not used when initializing BertForSequenceClassification: ['cls.predictions.decoder.weight', 'cls.predictions.decoder.bias', 'cls.predictions.bias', 'cls.predictions.transform.dense.weight', 'cls.seq_relationship.weight', 'cls.seq_relationship.bias', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.dense.bias']
+- This IS expected if you are initializing BertForSequenceClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertForSequenceClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of BertForSequenceClassification were not initialized from the model checkpoint at google/bert_uncased_L-2_H-128_A-2 and are newly initialized: ['classifier.bias', 'classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pytorch_lightning/trainer/connectors/accelerator_connector.py:445: LightningDeprecationWarning: Setting `Trainer(gpus=0)` is deprecated in v1.7 and will be removed in v2.0. Please use `Trainer(accelerator='gpu', devices=0)` instead.
+  rank_zero_deprecation(
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+Reusing dataset glue (/Users/prabinnepal/.cache/huggingface/datasets/glue/cola/1.0.0/dacbe3125aa31d7f70367a07a8a9e72a5a0bfeb5fc42e75c9db75b96da6053ad)
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 3/3 [00:00<00:00, 928.56it/s]
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████| 9/9 [00:00<00:00, 12.85ba/s]
+Sanity Checking DataLoader 0:   0%|                                                                             | 0/2 [00:00<?, ?it/s]----- tensor([1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0,
+        1, 1, 1, 1, 0, 0, 1, 1])
+Sanity Checking DataLoader 0:  50%|██████████████████████████████████▌                                  | 1/2 [00:00<00:00,  6.55it/s]----- tensor([0, 0, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 0, 0, 1, 0, 1, 1, 1, 0, 1, 1, 0, 1,
+        1, 0, 0, 1, 0, 1, 1, 1])
+Sanity Checking DataLoader 0: 100%|█████████████████████████████████████████████████████████████████████| 2/2 [00:00<00:00,  6.91it/s]
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:00<00:00, 15.29ba/s]
+  | Name                   | Type                          | Params
+-------------------------------------------------------------------------
+0 | bert                   | BertForSequenceClassification | 4.4 M
+1 | W                      | Linear                        | 258
+2 | train_accuracy_metric  | Accuracy                      | 0
+3 | val_accuracy_metric    | Accuracy                      | 0
+4 | f1_metric              | F1Score                       | 0
+5 | precision_macro_metric | Precision                     | 0
+6 | recall_macro_metric    | Recall                        | 0
+7 | precision_micro_metric | Precision                     | 0
+8 | recall_micro_metric    | Recall                        | 0
+-------------------------------------------------------------------------
+4.4 M     Trainable params
+0         Non-trainable params
+4.4 M     Total params
+17.546    Total estimated model params size (MB)
+/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pytorch_lightning/trainer/connectors/data_connector.py:219: PossibleUserWarning: The dataloader, val_dataloader 0, does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` (try 8 which is the number of cpus on this machine) in the `DataLoader` init to improve performance.
+
+Epoch 0:   2%|▎                  | 5/301 [00:02<02:45,  1.79it/s, loss=0.843, v_num=5qvb, train/loss_step=0.654, train/acc_step=0.688]
+/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pytorch_lightning/trainer/connectors/data_connector.py:219: PossibleUserWarning: The dataloader, train_dataloader, does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` (try 8 which is the number of cpus on this machine) in the `DataLoader` init to improve performance.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Epoch 0:  89%|███████████████▏ | 268/301 [02:22<00:17,  1.89it/s, loss=0.669, v_num=5qvb, train/loss_step=0.659, train/acc_step=0.571]----- tensor([1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0,
+        1, 1, 1, 1, 0, 0, 1, 1])                                                                               | 0/33 [00:00<?, ?it/s]
+Epoch 0:  89%|███████████████▏ | 269/301 [02:22<00:16,  1.89it/s, loss=0.669, v_num=5qvb, train/loss_step=0.659, train/acc_step=0.571]----- tensor([0, 0, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 0, 0, 1, 0, 1, 1, 1, 0, 1, 1, 0, 1,
+        1, 0, 0, 1, 0, 1, 1, 1])▏                                                                      | 1/33 [00:00<00:04,  6.89it/s]
+Epoch 0:  90%|███████████████▏ | 270/301 [02:22<00:16,  1.90it/s, loss=0.669, v_num=5qvb, train/loss_step=0.659, train/acc_step=0.571]----- tensor([1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 1, 0, 1,
+        1, 0, 1, 0, 1, 1, 0, 0])██▍                                                                    | 2/33 [00:00<00:04,  6.88it/s]
+Epoch 0:  90%|███████████████▎ | 271/301 [02:22<00:15,  1.90it/s, loss=0.669, v_num=5qvb, train/loss_step=0.659, train/acc_step=0.571]----- tensor([1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 0, 0, 1, 1,
+        1, 1, 0, 0, 0, 1, 1, 1])████▋                                                                  | 3/33 [00:00<00:04,  6.79it/s]
+Epoch 0:  90%|███████████████▎ | 272/301 [02:22<00:15,  1.91it/s, loss=0.669, v_num=5qvb, train/loss_step=0.659, train/acc_step=0.571]----- tensor([0, 0, 1, 1, 0, 1, 1, 0, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0,
+        1, 1, 1, 0, 1, 1, 1, 1])██████▊                                                                | 4/33 [00:00<00:04,  6.83it/s]
+Epoch 0:  91%|███████████████▍ | 273/301 [02:22<00:14,  1.91it/s, loss=0.669, v_num=5qvb, train/loss_step=0.659, train/acc_step=0.571]----- tensor([0, 0, 1, 1, 0, 0, 1, 1, 1, 1, 0, 1, 0, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0,
+        1, 1, 1, 1, 0, 0, 1, 0])█████████                                                              | 5/33 [00:00<00:04,  6.80it/s]
+Epoch 0:  91%|███████████████▍ | 274/301 [02:22<00:14,  1.92it/s, loss=0.669, v_num=5qvb, train/loss_step=0.659, train/acc_step=0.571]----- tensor([0, 1, 1, 1, 0, 1, 1, 0, 1, 0, 0, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1,
+        1, 0, 0, 1, 1, 1, 1, 0])███████████▎                                                           | 6/33 [00:00<00:03,  6.79it/s]
+Epoch 0:  91%|███████████████▌ | 275/301 [02:23<00:13,  1.92it/s, loss=0.669, v_num=5qvb, train/loss_step=0.659, train/acc_step=0.571]----- tensor([0, 0, 0, 1, 1, 0, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1,
+        0, 1, 1, 1, 0, 1, 1, 0])█████████████▍                                                         | 7/33 [00:01<00:03,  6.75it/s]
+Epoch 0:  92%|███████████████▌ | 276/301 [02:23<00:12,  1.93it/s, loss=0.669, v_num=5qvb, train/loss_step=0.659, train/acc_step=0.571]----- tensor([1, 0, 1, 1, 1, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 1,
+        0, 0, 1, 0, 1, 1, 1, 1])███████████████▋                                                       | 8/33 [00:01<00:03,  6.70it/s]
+Epoch 0:  92%|███████████████▋ | 277/301 [02:23<00:12,  1.93it/s, loss=0.669, v_num=5qvb, train/loss_step=0.659, train/acc_step=0.571]----- tensor([1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 0,
+        1, 1, 1, 1, 1, 1, 0, 1])█████████████████▉                                                     | 9/33 [00:01<00:03,  6.65it/s]
+Epoch 0:  92%|███████████████▋ | 278/301 [02:23<00:11,  1.94it/s, loss=0.669, v_num=5qvb, train/loss_step=0.659, train/acc_step=0.571]----- tensor([1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 0, 1,
+        0, 1, 1, 1, 1, 1, 0, 1])███████████████████▊                                                  | 10/33 [00:01<00:03,  6.63it/s]
+Epoch 0:  93%|███████████████▊ | 279/301 [02:23<00:11,  1.94it/s, loss=0.669, v_num=5qvb, train/loss_step=0.659, train/acc_step=0.571]----- tensor([1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1])██████████████████████                                                | 11/33 [00:01<00:03,  6.66it/s]
+Epoch 0:  93%|███████████████▊ | 280/301 [02:23<00:10,  1.95it/s, loss=0.669, v_num=5qvb, train/loss_step=0.659, train/acc_step=0.571]----- tensor([0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1])████████████████████████▏                                             | 12/33 [00:01<00:03,  6.68it/s]
+Epoch 0:  93%|███████████████▊ | 281/301 [02:24<00:10,  1.95it/s, loss=0.669, v_num=5qvb, train/loss_step=0.659, train/acc_step=0.571]----- tensor([1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 0, 1, 1, 0, 0, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1])██████████████████████████▎                                           | 13/33 [00:01<00:02,  6.68it/s]
+Epoch 0:  94%|███████████████▉ | 282/301 [02:24<00:09,  1.96it/s, loss=0.669, v_num=5qvb, train/loss_step=0.659, train/acc_step=0.571]----- tensor([1, 1, 1, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 1, 0, 1, 1, 0,
+        0, 1, 1, 0, 1, 1, 0, 1])████████████████████████████▌                                         | 14/33 [00:02<00:02,  6.68it/s]
+Epoch 0:  94%|███████████████▉ | 283/301 [02:24<00:09,  1.96it/s, loss=0.669, v_num=5qvb, train/loss_step=0.659, train/acc_step=0.571]----- tensor([0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 0, 1, 1, 0, 0, 1, 1,
+        0, 1, 1, 0, 1, 0, 0, 0])██████████████████████████████▋                                       | 15/33 [00:02<00:02,  6.69it/s]
+Epoch 0:  94%|████████████████ | 284/301 [02:24<00:08,  1.97it/s, loss=0.669, v_num=5qvb, train/loss_step=0.659, train/acc_step=0.571]----- tensor([1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1,
+        1, 0, 0, 0, 0, 0, 0, 1])████████████████████████████████▉                                     | 16/33 [00:02<00:02,  6.71it/s]
+Epoch 0:  95%|████████████████ | 285/301 [02:24<00:08,  1.97it/s, loss=0.669, v_num=5qvb, train/loss_step=0.659, train/acc_step=0.571]----- tensor([1, 0, 0, 1, 0, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0,
+        0, 0, 1, 1, 1, 1, 1, 1])███████████████████████████████████                                   | 17/33 [00:02<00:02,  6.72it/s]
+Epoch 0:  95%|████████████████▏| 286/301 [02:24<00:07,  1.98it/s, loss=0.669, v_num=5qvb, train/loss_step=0.659, train/acc_step=0.571]----- tensor([1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0, 1, 0, 0, 1,
+        1, 1, 1, 1, 1, 0, 0, 1])█████████████████████████████████████▎                                | 18/33 [00:02<00:02,  6.71it/s]
+Epoch 0:  95%|████████████████▏| 287/301 [02:24<00:07,  1.98it/s, loss=0.669, v_num=5qvb, train/loss_step=0.659, train/acc_step=0.571]----- tensor([0, 1, 1, 1, 1, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 1, 1, 1, 1, 0, 0,
+        1, 1, 1, 1, 1, 0, 1, 1])███████████████████████████████████████▍                              | 19/33 [00:02<00:02,  6.71it/s]
+Epoch 0:  96%|████████████████▎| 288/301 [02:25<00:06,  1.98it/s, loss=0.669, v_num=5qvb, train/loss_step=0.659, train/acc_step=0.571]----- tensor([0, 1, 1, 1, 1, 0, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 0,
+        1, 1, 1, 1, 1, 1, 1, 1])█████████████████████████████████████████▋                            | 20/33 [00:02<00:01,  6.71it/s]
+Epoch 0:  96%|████████████████▎| 289/301 [02:25<00:06,  1.99it/s, loss=0.669, v_num=5qvb, train/loss_step=0.659, train/acc_step=0.571]----- tensor([0, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0,
+        0, 1, 1, 1, 0, 0, 0, 1])███████████████████████████████████████████▊                          | 21/33 [00:03<00:01,  6.72it/s]
+Epoch 0:  96%|████████████████▍| 290/301 [02:25<00:05,  1.99it/s, loss=0.669, v_num=5qvb, train/loss_step=0.659, train/acc_step=0.571]----- tensor([0, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 0, 0, 1,
+        1, 0, 0, 1, 1, 0, 1, 1])██████████████████████████████████████████████                        | 22/33 [00:03<00:01,  6.72it/s]
+Epoch 0:  97%|████████████████▍| 291/301 [02:25<00:05,  2.00it/s, loss=0.669, v_num=5qvb, train/loss_step=0.659, train/acc_step=0.571]----- tensor([1, 1, 1, 1, 0, 0, 1, 0, 1, 1, 0, 1, 0, 0, 1, 0, 1, 1, 0, 0, 1, 0, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1])████████████████████████████████████████████████▏                     | 23/33 [00:03<00:01,  6.73it/s]
+Epoch 0:  97%|████████████████▍| 292/301 [02:25<00:04,  2.00it/s, loss=0.669, v_num=5qvb, train/loss_step=0.659, train/acc_step=0.571]----- tensor([1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1])██████████████████████████████████████████████████▎                   | 24/33 [00:03<00:01,  6.73it/s]
+Epoch 0:  97%|████████████████▌| 293/301 [02:25<00:03,  2.01it/s, loss=0.669, v_num=5qvb, train/loss_step=0.659, train/acc_step=0.571]----- tensor([1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 1, 1, 0,
+        0, 0, 1, 0, 0, 1, 1, 1])████████████████████████████████████████████████████▌                 | 25/33 [00:03<00:01,  6.72it/s]
+Epoch 0:  98%|████████████████▌| 294/301 [02:25<00:03,  2.01it/s, loss=0.669, v_num=5qvb, train/loss_step=0.659, train/acc_step=0.571]----- tensor([0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 1, 1, 1, 0, 1, 1, 0, 1, 0, 1, 0, 1, 1, 1,
+        1, 1, 1, 0, 0, 1, 1, 1])██████████████████████████████████████████████████████▋               | 26/33 [00:03<00:01,  6.71it/s]
+Epoch 0:  98%|████████████████▋| 295/301 [02:26<00:02,  2.02it/s, loss=0.669, v_num=5qvb, train/loss_step=0.659, train/acc_step=0.571]----- tensor([0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 0,
+        1, 0, 0, 0, 1, 1, 1, 1])████████████████████████████████████████████████████████▉             | 27/33 [00:04<00:00,  6.70it/s]
+Epoch 0:  98%|████████████████▋| 296/301 [02:26<00:02,  2.02it/s, loss=0.669, v_num=5qvb, train/loss_step=0.659, train/acc_step=0.571]----- tensor([1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 0,
+        1, 0, 0, 0, 1, 1, 0, 1])███████████████████████████████████████████████████████████           | 28/33 [00:04<00:00,  6.69it/s]
+Epoch 0:  99%|████████████████▊| 297/301 [02:26<00:01,  2.03it/s, loss=0.669, v_num=5qvb, train/loss_step=0.659, train/acc_step=0.571]----- tensor([1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1])█████████████████████████████████████████████████████████████▎        | 29/33 [00:04<00:00,  6.68it/s]
+Epoch 0:  99%|████████████████▊| 298/301 [02:26<00:01,  2.03it/s, loss=0.669, v_num=5qvb, train/loss_step=0.659, train/acc_step=0.571]----- tensor([1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 0, 0, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 0, 0])███████████████████████████████████████████████████████████████▍      | 30/33 [00:04<00:00,  6.67it/s]
+Epoch 0:  99%|████████████████▉| 299/301 [02:26<00:00,  2.04it/s, loss=0.669, v_num=5qvb, train/loss_step=0.659, train/acc_step=0.571]----- tensor([0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1,
+        0, 0, 1, 1, 0, 1, 0, 1])█████████████████████████████████████████████████████████████████▋    | 31/33 [00:04<00:00,  6.67it/s]
+Epoch 0: 100%|████████████████▉| 300/301 [02:26<00:00,  2.04it/s, loss=0.669, v_num=5qvb, train/loss_step=0.659, train/acc_step=0.571]----- tensor([1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1])
+Epoch 0: 100%|█████████████████| 301/301 [02:27<00:00,  2.05it/s, loss=0.669, v_num=5qvb, train/loss_step=0.659, train/acc_step=0.571]
+
+Validation DataLoader 0: 100%|████████████████████████████████████████████████████████████████████████| 33/33 [00:04<00:00,  6.73it/s]
+Traceback (most recent call last):
+  File "/Users/prabinnepal/my_projects/MLOps/wandb_logging/train.py", line 36, in <module>
+    main()
+  File "/Users/prabinnepal/my_projects/MLOps/wandb_logging/train.py", line 32, in main
+    trainer.fit(cola_model, cola_data)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 700, in fit
+    self._call_and_handle_interrupt(
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 654, in _call_and_handle_interrupt
+    return trainer_fn(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 741, in _fit_impl
+    results = self._run(model, ckpt_path=self.ckpt_path)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 1166, in _run
+    results = self._run_stage()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 1252, in _run_stage
+    return self._run_train()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 1282, in _run_train
+    self.fit_loop.run()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pytorch_lightning/loops/loop.py", line 201, in run
+    self.on_advance_end()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pytorch_lightning/loops/fit_loop.py", line 297, in on_advance_end
+    self.trainer._call_callback_hooks("on_train_epoch_end")
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 1596, in _call_callback_hooks
+    fn(self, self.lightning_module, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pytorch_lightning/callbacks/early_stopping.py", line 183, in on_train_epoch_end
+    self._run_early_stopping_check(trainer)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pytorch_lightning/callbacks/early_stopping.py", line 194, in _run_early_stopping_check
+    if trainer.fast_dev_run or not self._validate_condition_metric(  # disable early_stopping with fast_dev_run
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pytorch_lightning/callbacks/early_stopping.py", line 149, in _validate_condition_metric
+    raise RuntimeError(error_msg)
+RuntimeError: Early stopping conditioned on metric `val_loss` which is not available. Pass in or modify your `EarlyStopping` callback to use any of the following: `train/loss`, `train/loss_step`, `train/acc`, `train/acc_step`, `valid/loss`, `valid/loss_epoch`, `valid/acc`, `valid/precision_macro`, `valid/recall_macro`, `valid/precision_micro`, `valid/recall_micro`, `valid/f1`, `train/loss_epoch`, `train/acc_epoch`

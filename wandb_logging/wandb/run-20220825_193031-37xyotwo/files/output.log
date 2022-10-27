@@ -1,0 +1,61 @@
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+Reusing dataset glue (/Users/prabinnepal/.cache/huggingface/datasets/glue/cola/1.0.0/dacbe3125aa31d7f70367a07a8a9e72a5a0bfeb5fc42e75c9db75b96da6053ad)
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 3/3 [00:00<00:00, 201.11it/s]
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████| 9/9 [00:00<00:00, 11.33ba/s]
+  0%|                                                                                                           | 0/2 [00:00<?, ?ba/s]
+Sanity Checking DataLoader 0:   0%|                                                                             | 0/2 [00:00<?, ?it/s]----- tensor([1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0,
+        1, 1, 1, 1, 0, 0, 1, 1])
+Sanity Checking DataLoader 0:  50%|██████████████████████████████████▌                                  | 1/2 [00:00<00:00,  5.03it/s]----- tensor([0, 0, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 0, 0, 1, 0, 1, 1, 1, 0, 1, 1, 0, 1,
+        1, 0, 0, 1, 0, 1, 1, 1])
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:00<00:00, 23.77ba/s]
+  | Name                   | Type                          | Params
+-------------------------------------------------------------------------
+0 | bert                   | BertForSequenceClassification | 4.4 M
+1 | W                      | Linear                        | 258
+2 | train_accuracy_metric  | Accuracy                      | 0
+3 | val_accuracy_metric    | Accuracy                      | 0
+4 | f1_metric              | F1Score                       | 0
+5 | precision_macro_metric | Precision                     | 0
+6 | recall_macro_metric    | Recall                        | 0
+7 | precision_micro_metric | Precision                     | 0
+8 | recall_micro_metric    | Recall                        | 0
+-------------------------------------------------------------------------
+4.4 M     Trainable params
+0         Non-trainable params
+4.4 M     Total params
+17.546    Total estimated model params size (MB)
+/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pytorch_lightning/trainer/connectors/data_connector.py:219: PossibleUserWarning: The dataloader, val_dataloader 0, does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` (try 8 which is the number of cpus on this machine) in the `DataLoader` init to improve performance.
+  rank_zero_warn(
+Traceback (most recent call last):
+  File "/Users/prabinnepal/my_projects/MLOps/wandb_logging/train.py", line 69, in <module>
+    main()
+  File "/Users/prabinnepal/my_projects/MLOps/wandb_logging/train.py", line 65, in main
+    trainer.fit(cola_model, cola_data)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 700, in fit
+    self._call_and_handle_interrupt(
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 654, in _call_and_handle_interrupt
+    return trainer_fn(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 741, in _fit_impl
+    results = self._run(model, ckpt_path=self.ckpt_path)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 1166, in _run
+    results = self._run_stage()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 1252, in _run_stage
+    return self._run_train()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 1274, in _run_train
+    self._run_sanity_check()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 1342, in _run_sanity_check
+    val_loop.run()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pytorch_lightning/loops/loop.py", line 207, in run
+    output = self.on_run_end()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pytorch_lightning/loops/dataloader/evaluation_loop.py", line 201, in on_run_end
+    self._on_evaluation_end()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pytorch_lightning/loops/dataloader/evaluation_loop.py", line 265, in _on_evaluation_end
+    self.trainer._call_callback_hooks(hook_name, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 1596, in _call_callback_hooks
+    fn(self, self.lightning_module, *args, **kwargs)
+  File "/Users/prabinnepal/my_projects/MLOps/wandb_logging/train.py", line 21, in on_validation_end
+    sentences = val_batch["sentence"]
+KeyError: 'sentence'

@@ -1,0 +1,21 @@
+2022-08-25 19:29:23,119 INFO    MainThread:88686 [wandb_setup.py:_flush():76] Configure stats pid to 88686
+2022-08-25 19:29:23,119 INFO    MainThread:88686 [wandb_setup.py:_flush():76] Loading settings from /Users/prabinnepal/.config/wandb/settings
+2022-08-25 19:29:23,119 INFO    MainThread:88686 [wandb_setup.py:_flush():76] Loading settings from /Users/prabinnepal/my_projects/MLOps/wandb_logging/wandb/settings
+2022-08-25 19:29:23,119 INFO    MainThread:88686 [wandb_setup.py:_flush():76] Loading settings from environment variables: {'_require_service': 'True'}
+2022-08-25 19:29:23,119 INFO    MainThread:88686 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'train.py', 'program': '/Users/prabinnepal/my_projects/MLOps/wandb_logging/train.py'}
+2022-08-25 19:29:23,119 INFO    MainThread:88686 [wandb_init.py:_log_setup():461] Logging user logs to /Users/prabinnepal/my_projects/MLOps/wandb_logging/wandb/run-20220825_192923-2otjslk7/logs/debug.log
+2022-08-25 19:29:23,119 INFO    MainThread:88686 [wandb_init.py:_log_setup():462] Logging internal logs to /Users/prabinnepal/my_projects/MLOps/wandb_logging/wandb/run-20220825_192923-2otjslk7/logs/debug-internal.log
+2022-08-25 19:29:23,120 INFO    MainThread:88686 [wandb_init.py:init():495] calling init triggers
+2022-08-25 19:29:23,120 INFO    MainThread:88686 [wandb_init.py:init():498] wandb.init called with sweep_config: {}
+config: {}
+2022-08-25 19:29:23,120 INFO    MainThread:88686 [wandb_init.py:init():548] starting backend
+2022-08-25 19:29:23,120 INFO    MainThread:88686 [wandb_init.py:init():552] setting up manager
+2022-08-25 19:29:23,129 INFO    MainThread:88686 [backend.py:_multiprocessing_setup():97] multiprocessing start_methods=spawn,fork,forkserver, using: spawn
+2022-08-25 19:29:23,133 INFO    MainThread:88686 [wandb_init.py:init():558] backend started and connected
+2022-08-25 19:29:23,136 INFO    MainThread:88686 [wandb_init.py:init():636] updated telemetry
+2022-08-25 19:29:23,137 INFO    MainThread:88686 [wandb_init.py:init():667] communicating run to backend with 30 second timeout
+2022-08-25 19:29:26,161 WARNING MsgRouterThr:88686 [router.py:message_loop():76] message_loop has been closed
+2022-08-25 19:29:53,142 INFO    MainThread:88686 [interface_shared.py:_communicate_run():331] couldn't get run from backend
+2022-08-25 19:29:53,145 ERROR   MainThread:88686 [wandb_init.py:init():676] backend process timed out
+2022-08-25 19:29:53,145 ERROR   MainThread:88686 [wandb_init.py:init():685] encountered error: Error communicating with wandb process
+For more info see: https://docs.wandb.ai/library/init#init-start-error

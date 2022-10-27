@@ -1,0 +1,15 @@
+{
+    "os": "macOS-12.1-arm64-arm-64bit",
+    "python": "3.10.2",
+    "heartbeatAt": "2022-10-27T23:23:58.778306",
+    "startedAt": "2022-10-27T23:23:57.949916",
+    "docker": null,
+    "cpu_count": 8,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "/Users/prabinnepal/my_projects/MLOps/hydra_config/train.py",
+    "host": "Prabins-MacBook-Pro.local",
+    "username": "prabinnepal",
+    "executable": "/usr/local/bin/python3"
+}
